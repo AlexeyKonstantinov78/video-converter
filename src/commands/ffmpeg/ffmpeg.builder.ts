@@ -22,7 +22,7 @@ export class FfmpegBuilder {
       throw new Error('не задан параметр input');
     }
     const args: string[] = ['-i', this.inputPath];
-    this.options..forEach((value, key) => {
+    this.options.forEach((value, key) => {
       args.push(key, value);
     });
     args.push(outputPath);
