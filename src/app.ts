@@ -1,5 +1,11 @@
-import { spawn } from "child_process";
+import { PromptService } from "./core/prompt/prompt.service";
 
-const rez = spawn('ffmpeg');
+export class App {
+  async run() {
+    const  result = await (new PromptService()).input<number>('Число', 'number');
+    console.log(result);
+  }
+}
 
-console.log(rez);
+const app = new App();
+app.run();
