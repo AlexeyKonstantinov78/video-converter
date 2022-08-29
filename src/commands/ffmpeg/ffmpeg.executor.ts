@@ -14,9 +14,7 @@ export class FfmpegExecutor extends CommandExecuter<IFfmpegInput> {
   constructor(logger: IStreamLogger) {
     super(logger);
   }
-
-
-
+  
   protected async prompt(): Promise<IFfmpegInput> {
     const width = await this.promptService.input<number>('Ширина', 'number');
     const height = await this.promptService.input<number>('Высота', 'number');
